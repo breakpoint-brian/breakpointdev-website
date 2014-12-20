@@ -4,8 +4,7 @@
 	$query ="SELECT `entry` FROM `users` WHERE id='".$_SESSION['id']."' LIMIT 1";
 	$result = mysqli_query($link, $query);
 	$row = mysqli_fetch_array($result);
-	print_r($_SESSION);
-	print_r($row);
+	$sesId = $_SESSION;
 	$entry = $row['entry'];
 ?>
 
@@ -105,7 +104,7 @@ respond.min.js"></script>
  	<div class="row">
  	 	
  	 	 <div class="col-md-6 col-md-offset-3" id="topRow">
- 	 	 	<textarea class="form-control"><? echo $entry; ?></textarea>
+ 	 	 	<textarea class="form-control"><? echo $entry; echo $sesId; ?></textarea>
  	 	 
  	 	 </div>
  	 	
