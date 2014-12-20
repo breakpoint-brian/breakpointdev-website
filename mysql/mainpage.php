@@ -121,8 +121,8 @@ needed -->
 
  <script>
  $(".contentContainer").css("min-height",$(window).height());
- $("textarea").css("height",$(window).height()-110);
- $("textarea").keyup(function() {
+ $("#textentry").css("height",$(window).height()-110);
+ $("#textentry").keyup(function() {
  $.post("updateentry.php", {entry:$("#textentry").val()});
  });
   </script>
