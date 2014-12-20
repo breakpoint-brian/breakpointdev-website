@@ -104,7 +104,7 @@ respond.min.js"></script>
  	<div class="row">
  	 	
  	 	 <div class="col-md-6 col-md-offset-3" id="topRow">
- 	 	 	<textarea class="form-control"><? echo $entry; echo $sesId; ?></textarea>
+ 	 	 	<textarea class="form-control"></textarea>
  	 	 
  	 	 </div>
  	 	
