@@ -103,28 +103,24 @@ respond.min.js"></script>
  	<div class="row">
  	 	
  	 	 <div class="col-md-6 col-md-offset-3" id="topRow">
- 	 	 	<textarea class="form-control" id="textentry"></textarea>
- 	 	 
+ 	 	 	<textarea class="form-control" id="textentry">I'm putting text here</textarea>
  	 	 </div>
- 	 	
-	</div>
-
+ 	</div>
  </div>
 
 
  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/
-jquery.min.js"></script>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
  <!-- Include all compiled plugins (below), or include individual files as
 needed -->
  <script src="../js/bootstrap.min.js"></script>
 
  <script>
- $(".contentContainer").css("min-height",$(window).height());
- $("#textentry").css("height",$(window).height()-110);
- $("#textentry").keyup(function() {
- $.post("updateentry.php", {entry:$("#textentry").val()});
- });
+ 	$(".contentContainer").css("min-height",$(window).height());
+ 	$("#textentry").css("height",$(window).height()-110);
+ 	$("#textentry").keyup(function() {
+ 	$.post("updateentry.php", {entry:$("#textentry").val()});
+ 	});
   </script>
  </body>
 </html> 
