@@ -122,6 +122,84 @@ respond.min.js"></script>
  	 	 	
  	 	 <form class="marginTop form-inline" method="post">
  	 	 	<div class="form-group">
+ 	 	 		<label for="firstName">First Name</label>
+ 	 	 		<input type="text" id="firstName" name="firstName" class="form-control" placeholder="First Name" value="<?php echo addslashes($_POST['fName']);?>" />
+ 	 	 	</div>
+ 	 	 	<div class="form-group">
+ 	 	 		<label for="lastName">Last Name</label>
+ 	 	 		<input type="text" id="lastName" name="lastName" class="form-control" placeholder="Last Name" value="<?php echo addslashes($_POST['lName']);?>" />
+ 	 	 	</div>
+ 	 	 	<div class="form-group">
+ 	 	 		<label for="street">Street</label>
+ 	 	 		<input type="text" id="street" name="street" class="form-control" placeholder="Street" value="<?php echo addslashes($_POST['street']);?>" />
+ 	 	 	</div>
+ 	 	 	<div class="form-group">
+ 	 	 		<label for="city">Cityt</label>
+ 	 	 		<input type="text" id="city" name="city" class="form-control" placeholder="City" value="<?php echo addslashes($_POST['city']);?>" />
+ 	 	 	</div>
+ 	 	 	<div class="form-group dropdown">
+ 	 	 		<button class="btn btn-default dropdown-toggle" type="button" id="state" data-toggle="dropdown" aria-expanded="true">Dropdown<span class="caret"></span></button>
+ 	 	 			<ul class="dropdown-menu" role="menu" aria-labelledby="state">
+ 	 	 				<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Alabama</a></li>
+ 	 	 				<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Alaska</a></li>
+ 	 	 				<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Arizona</a></li>
+ 	 	 				<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Arkansas</a></li>
+ 	 	 				<li role="presentation"><a role="menuitem" tabindex="-1" href="#">California</a></li>
+ 	 	 				<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Colorado</a></li>
+ 	 	 				<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Connecticut</a></li>
+ 	 	 				<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Delaware</a></li>
+ 	 	 				<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Florida</a></li>
+ 	 	 				<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Georgia</a></li>
+ 	 	 				<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Hawaii</a></li>
+ 	 	 				<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Idaho</a></li>
+ 	 	 				<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Illinois</a></li>
+ 	 	 				<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Indiana</a></li>
+ 	 	 				<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Iowa</a></li>
+ 	 	 				<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Kansas</a></li>
+ 	 	 				<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Kentucky</a></li>
+ 	 	 				<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Louisiana</a></li>
+ 	 	 				<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Maine</a></li>
+ 	 	 				<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Maryland</a></li>
+ 	 	 				<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Massachusetts</a></li>
+ 	 	 				<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Michigan</a></li>
+ 	 	 				<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Minnesota</a></li>
+ 	 	 				<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Mississippi</a></li>
+ 	 	 				<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Missouri</a></li>
+ 	 	 				<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Montana</a></li>
+ 	 	 				<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Nebraksa</a></li>
+ 	 	 				<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Nevada</a></li>
+ 	 	 				<li role="presentation"><a role="menuitem" tabindex="-1" href="#">New Hampshire</a></li>
+ 	 	 				<li role="presentation"><a role="menuitem" tabindex="-1" href="#">New Jersey</a></li>
+ 	 	 				<li role="presentation"><a role="menuitem" tabindex="-1" href="#">New Mexico</a></li>
+ 	 	 				<li role="presentation"><a role="menuitem" tabindex="-1" href="#">New York</a></li>
+ 	 	 				<li role="presentation"><a role="menuitem" tabindex="-1" href="#">North Carolina</a></li>
+ 	 	 				<li role="presentation"><a role="menuitem" tabindex="-1" href="#">North Dakota</a></li>
+ 	 	 				<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Ohio</a></li>
+ 	 	 				<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Oklahoma</a></li>
+ 	 	 				<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Oregon</a></li>
+ 	 	 				<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Pennsylvania</a></li>
+ 	 	 				<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Rhode Island</a></li>
+ 	 	 				<li role="presentation"><a role="menuitem" tabindex="-1" href="#">South Carolina</a></li>
+ 	 	 				<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Tennessee</a></li>
+ 	 	 				<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Texas</a></li>
+ 	 	 				<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Utah</a></li>
+ 	 	 				<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Vermont</a></li>
+ 	 	 				<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Virginia</a></li>
+ 	 	 				<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Washington</a></li>
+ 	 	 				<li role="presentation"><a role="menuitem" tabindex="-1" href="#">West Virginia</a></li>
+ 	 	 				<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Alabama</a></li>
+ 	 	 				<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Wisconsin</a></li>
+ 	 	 				<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Wyoming</a></li>
+ 	 	 				
+ 	 	 			</ul>
+ 	 	 		<label for="state">State</label>
+ 	 	 		<input type="select" id="street" name="street" class="form-control" placeholder="Street" value="<?php echo addslashes($_POST['street']);?>" />
+ 	 	 	</div>
+ 	 	 	<div class="form-group">
+ 	 	 		<label for="phone">Phone</label>
+ 	 	 		<input type="text" id="phone" name="phone" class="form-control" placeholder="Phone" value="<?php echo addslashes($_POST['phone']);?>" />
+ 	 	 	</div>
+ 	 	 	<div class="form-group">
  	 	 		<label for="email">Email</label>
  	 	 		<input type="email" id="email" name="email" class="form-control" placeholder="email" value="<?php echo addslashes($_POST['email']);?>" />
  	 	 	</div>
