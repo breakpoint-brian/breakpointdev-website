@@ -6,6 +6,16 @@
 		}
 	include("connection.php");
 	if ($_POST['submit']=="Sign Up") {
+		
+		 if (!$_POST['fName']) {
+		 	$error.="<br />Please enter your first name";
+		 }
+		 if (!$_POST['lName']) {
+		 	$error.="<br />Please enter your last name";
+		 }
+		 if (!$_POST['street']) {
+		 	$error.="<br />Please enter your street address";
+		 }
 		 if (!$_POST['email']) {
 		 	$error.="<br />Please enter an email address";
 		 	} else {
