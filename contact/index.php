@@ -61,6 +61,11 @@
 		</div>
         <!-- <h3 class="text-muted">Title</h3> -->
       </div>
+      <div class="container">
+      	<div class="jumbotron">
+      		<img src="../images/bottle2.jpg" />
+      	</div>
+      </div>
       <div class="container" action="mail.php">
       	<form method="post">
       		<div class="form-group">
