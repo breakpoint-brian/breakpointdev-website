@@ -1,12 +1,4 @@
-<?php  
-	session_start();
-	include("connection.php");
-	$query = "SELECT `entry` FROM `users` WHERE id='".$_SESSION['id']."' LIMIT 1";
-	$result = mysqli_query($link, $query);
-	$row = mysqli_fetch_array($result);
-	$entry = $row['entry'];
-?>
-
+<?php include("dbquery.php");?>
 <!DOCTYPE html>
 <html lang="en">
  <head>
@@ -98,15 +90,15 @@ respond.min.js"></script>
  		</div>
 	</div>
 
- <div class="container contentContainer" id="topContainer">
+ 	<div class="container contentContainer" id="topContainer">
 
- 	<div class="row">
+ 		<div class="row">
  	 	
- 	 	 <div class="col-md-6 col-md-offset-3" id="topRow">
- 	 	 	<textarea class="form-control" id="textentry">I'm putting text here</textarea>
- 	 	 </div>
+ 	 		<div class="col-md-6 col-md-offset-3" id="topRow">
+ 	 	 		<textarea class="form-control" id="textentry"><?php echo $entry;?></textarea>
+ 	 	 	</div>
+ 		</div>
  	</div>
- </div>
 
 
  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->

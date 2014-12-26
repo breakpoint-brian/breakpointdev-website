@@ -74,6 +74,16 @@ respond.min.js"></script>
  	 	 width:250px;
  }
  
+ .scrollable-menu {
+    height: auto;
+    max-height: 200px;
+    overflow-x: hidden;
+}
+
+#city {
+	width:350px;
+}
+ 
  </style>
  </head>
 <body data-spy="scroll" data-target=".navbar-collapse">
@@ -105,7 +115,7 @@ respond.min.js"></script>
 
  <div class="row">
  	 	
- 	 	 <div class="col-md-6 col-md-offset-3" id="topRow">
+ 	 <div class="col-md-6 col-md-offset-3" id="topRow">
  	 	 	
  	 	 <h1 class="marginTop">Login or Signup</h1>
  	 	 	
@@ -119,8 +129,9 @@ respond.min.js"></script>
  	 	 		echo '<div class="alert alert-success">'.addslashes($message).'</div>';
  	 	 	}
  	 	 ?>
- 	 	 	
- 	 	 <form class="marginTop form-inline" method="post">
+ 	 </div>
+ 	 <div class="col-md-6 col-md-offset-3">	
+ 	 	 <form class="marginTop form-horizontal" method="post">
  	 	 	<div class="form-group">
  	 	 		<label for="firstName">First Name</label>
  	 	 		<input type="text" id="firstName" name="firstName" class="form-control" placeholder="First Name" value="<?php echo addslashes($_POST['fName']);?>" />
@@ -134,12 +145,12 @@ respond.min.js"></script>
  	 	 		<input type="text" id="street" name="street" class="form-control" placeholder="Street" value="<?php echo addslashes($_POST['street']);?>" />
  	 	 	</div>
  	 	 	<div class="form-group">
- 	 	 		<label for="city">Cityt</label>
+ 	 	 		<label for="city">City</label>
  	 	 		<input type="text" id="city" name="city" class="form-control" placeholder="City" value="<?php echo addslashes($_POST['city']);?>" />
  	 	 	</div>
  	 	 	<div class="form-group dropdown">
- 	 	 		<button class="btn btn-default dropdown-toggle" type="button" id="state" data-toggle="dropdown" aria-expanded="true">Dropdown<span class="caret"></span></button>
- 	 	 			<ul class="dropdown-menu" role="menu" aria-labelledby="state">
+ 	 	 		<button class="btn btn-default dropdown-toggle" type="button" id="state" data-toggle="dropdown" aria-expanded="true">State<span class="caret"></span></button>
+ 	 	 			<ul class="dropdown-menu scrollable-menu" role="menu" aria-labelledby="state" id="statelist">
  	 	 				<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Alabama</a></li>
  	 	 				<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Alaska</a></li>
  	 	 				<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Arizona</a></li>
@@ -190,10 +201,7 @@ respond.min.js"></script>
  	 	 				<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Alabama</a></li>
  	 	 				<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Wisconsin</a></li>
  	 	 				<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Wyoming</a></li>
- 	 	 				
  	 	 			</ul>
- 	 	 		<label for="state">State</label>
- 	 	 		<input type="select" id="street" name="street" class="form-control" placeholder="Street" value="<?php echo addslashes($_POST['street']);?>" />
  	 	 	</div>
  	 	 	<div class="form-group">
  	 	 		<label for="phone">Phone</label>
@@ -224,8 +232,13 @@ needed -->
  <script src="../js/bootstrap.min.js"></script>
 
  <script>
-
  $(".contentContainer").css("min-height",$(window).height());
+ $(function(){
+	 $("#statelist li a").click(function(){
+		$(".btn:first-child").text($(this).text());
+		$(".btn:first-child").val($(this).text());
+		});
+	});
   </script>
  </body>
 </html> 
