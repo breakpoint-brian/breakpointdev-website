@@ -1,3 +1,4 @@
+<?php include("mail.php") ?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -7,19 +8,19 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Breakpoint &#8211 QA, Automation, Development</title>
+    <title>Breakpoint - QA, Automation, Development</title>
 	
 	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
+	<script src="../js/bootstrap.min.js"></script>
 	
     <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles -->
-    <link href="breakpoint-custom.css" rel="stylesheet">
+    <link href="../breakpoint-custom.css" rel="stylesheet">
     
     <!-- Additional styles -->
-    <link href="breakpoint.css" rel="stylesheet">
+    <link href="../breakpoint.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -35,7 +36,7 @@
         <div class="navbar navbar-default navbar-fixed-top navcolor">
 			<div class="container">
 				<div class="navbar-header">
-					<a href="" class="navbar-brand" style="padding-top:3px;"><img src="images/logo.png"></a>
+					<a href="" class="navbar-brand" style="padding-top:3px;"><img src="../images/logo.png"></a>
 					
 					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
 					
@@ -49,42 +50,37 @@
 				
 				<div class="collapse navbar-collapse">
 					<ul class="nav navbar-nav" id="list">
-						<li class="active"><a href="index.html">Home</a></li>
+						<li><a href="index.html">Home</a></li>
 						<li><a href="">Quality Assurance</a></li>
 						<li><a href="">Development</a></li>
 						<li><a href="adventures/adv.html">Adventures</a></li>
-						<li><a href="">Contact</a></li>
+						<li class="active"><a href="">Contact</a></li>
 					</ul>
 				</div>
 			</div>
 		</div>
         <!-- <h3 class="text-muted">Title</h3> -->
       </div>
-      <div class="jumbotron" id="jumbo">
-        <div id="jumbo-content">
-        <img src="images/wavicon.png" />
-        <p class="lead" id="title-text">This is the blog of a 30-something software professional
-        from Austin, TX</p>
-        </div>
-      </div>
-
-      <div class="row marketing">
-        <div class="col-lg-6">
-          <h4><a href="" id="subhead"><span class="glyphicon glyphicon-check" aria-hidden="true">&nbsp;</span>Quality Assurance</a></h4>
-          <p>Musings on Quality Assurance and my experiences while working as a QA engineer</p>
-
-          <h4><a href="" id="subhead"><span class="glyphicon glyphicon-cloud" aria-hidden="true">&nbsp;</span>Development</a></h4>
-          <p>My coding projects in various states of function</p>
-
-        </div>
-
-        <div class="col-lg-6">
-          <h4><a href="adventures/adv.html" id="subhead"><span class="glyphicon glyphicon-road" aria-hidden="true">&nbsp;</span>Adventures</a></h4>
-          <p>A lot of what I do when I am not busy being professional</p>
-
-          <h4><a href="" id="subhead"><span class="glyphicon glyphicon-send" aria-hidden="true">&nbsp;</span>Contact</a></h4>
-          <p>Got something to say? Want to know more?</p>
-        </div>
+      <div class="container" action="mail.php">
+      	<form method="post">
+      		<div class="form-group">
+      			<label for="name">Name</label>
+      			<input type="text" name="name" id="name" class="form-control" placeholder="Enter your name">
+      		</div>
+      		<div class="form-group">
+      			<label for="email">Email</label>
+      			<input type="email" name="email" id="email" class="form-control" placeholder="Enter your email address">
+      		</div>
+      		<div class="form-group">
+      			<label for="subject">Subject</label>
+      			<input type="text" name="subject" id="subject" class="form-control" placeholder="Enter text here">
+      		</div>
+      		<div class="form-group">
+      			<label for="message">Message</label>
+      			<textarea name="message" id="message" class="form-control" placeholder="Enter your message" rows="5"></textarea>
+      		</div>
+      		<input type="submit" class="btn btn-default" name ="submit" value="Submit">
+      	</form>
       </div>
 
       <footer class="footer">
@@ -95,6 +91,6 @@
 
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="js/ie10-viewport-bug-workaround.js"></script>
+    <script src="../js/ie10-viewport-bug-workaround.js"></script>
   </body>
 </html>
