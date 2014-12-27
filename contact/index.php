@@ -53,7 +53,7 @@
 						<li><a href="index.html">Home</a></li>
 						<li><a href="">Quality Assurance</a></li>
 						<li><a href="">Development</a></li>
-						<li><a href="adventures/adv.html">Adventures</a></li>
+						<li><a href="adventures/adv.php">Adventures</a></li>
 						<li class="active"><a href="">Contact</a></li>
 					</ul>
 				</div>
@@ -66,8 +66,9 @@
       		<img src="../images/bottle2.jpg" />
       	</div>
       </div>
-      <div class="container" action="mail.php">
-      	<form method="post">
+      <div class="container">
+      	<?php echo $result; ?>
+      	<form method="post" id="contactForm">
       		<div class="form-group">
       			<label for="name">Name</label>
       			<input type="text" name="name" id="name" class="form-control" placeholder="Enter your name">
